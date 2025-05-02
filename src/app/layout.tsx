@@ -7,8 +7,8 @@ export const metadata = {
     description: 'Просмотр токена на Polygon',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-    const headersObj = headers();
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+    const headersObj = await headers();
     const cookies = headersObj.get('cookie') ?? null;
 
     return (

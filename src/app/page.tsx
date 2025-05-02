@@ -5,6 +5,7 @@ import { useAccount } from 'wagmi';
 import { formatUnits } from 'viem';
 import { erc20Abi, createPublicClient, http } from 'viem';
 import { polygon } from 'viem/chains';
+import "@reown/appkit-wallet-button/react";
 
 const TOKEN_ADDRESS = '0x2C89bbc92BD86F8075d1DEcc58C7F4E0107f286b';
 
@@ -93,7 +94,7 @@ export default function Home() {
 
         <hr style={{ margin: '20px 0' }} />
 
-        <appkit-button />
+        <appkit-wallet-button wallet={'trust'}  />
 
         {isConnected && balance && (
             <p style={{ marginTop: 16 }}>
